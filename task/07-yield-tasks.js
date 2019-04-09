@@ -32,18 +32,7 @@
  *
  */
 function* get99BottlesOfBeer() {
-  let i=99;
-  while (true){
-    yield i+' bottles of beer on the wall, '+i+' bottles of beer.';
-    yield 'Take one down and pass it around, '+(--i)+' bottle'+(i!==1 ? 's':'')+' of beer on the wall.';
-    if(i===1){
-      yield '1 bottle of beer on the wall, 1 bottle of beer.';
-      yield 'Take one down and pass it around, no more bottles of beer on the wall.';
-      yield 'No more bottles of beer on the wall, no more bottles of beer.';
-      yield 'Go to the store and buy some more, 99 bottles of beer on the wall.';
-      return ;
-    }
-  }
+  throw new Error('Not implemented');
 }
 
 
@@ -57,13 +46,7 @@ function* get99BottlesOfBeer() {
  *
  */
 function* getFibonacciSequence() {
-  let f0=0, f1=1, fn;
-  while(true){
-    fn=f0;
-    f0=f1;
-    f1=fn+f0;
-    yield fn;
-  }
+  throw new Error('Not implemented');
 }
 
 
@@ -98,13 +81,7 @@ function* getFibonacciSequence() {
  *
  */
 function* depthTraversalTree(root) {
-  let arr = [root];
-  while(arr.length){
-    let element = arr.pop();
-    yield element;
-    if(element.children)
-      arr = arr.concat(element.children.reverse());
-  }
+  throw new Error('Not implemented');
 }
 
 
@@ -130,13 +107,7 @@ function* depthTraversalTree(root) {
  *
  */
 function* breadthTraversalTree(root) {
-  let arr = [root];
-  while (arr.length) {
-    let element = arr.pop();
-    yield element;
-    if (element.children)
-      arr = element.children.reverse().concat(arr);
-  }
+  throw new Error('Not implemented');
 }
 
 
