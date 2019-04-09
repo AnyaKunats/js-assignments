@@ -66,7 +66,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function  extractNameFromTemplate(value) {
-  return value.slice(7,-1);
+  return value.slice(7, -1);
 }
 
 
@@ -81,7 +81,7 @@ function  extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-  return value.substr(0,1);
+  return value.substr(0, 1);
 }
 
 /**
@@ -143,7 +143,7 @@ function removeFirstOccurrences(str, value)  {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.slice(1,-1);
+  return str.slice(1, -1);
 }
 
 
@@ -278,7 +278,7 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  let arr=['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣','A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦','A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥','A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'];
+  let arr=['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣' ,'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
   return arr.indexOf(value);
 }
 
