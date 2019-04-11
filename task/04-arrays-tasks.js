@@ -37,7 +37,7 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  return new Array(len).fill(1).map((value,i)=>value+i*2);
+  return new Array(len).fill(1).map((value, i)=>value+i*2);
 }
 
 
@@ -249,7 +249,7 @@ function getMovingSum(arr) {
  * [ "a" ] => []
  */
 function getSecondItems(arr) {
-  return arr.filter((word,k)=>k%2!==0);
+  return arr.filter((word, k)=>k%2!==0);
 }
 
 
@@ -286,7 +286,7 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(arr) {
-  return arr.sort((a,b)=>b-a).slice(0,3);
+  return arr.sort((a, b)=>b-a).slice(0, 3);
 }
 
 
@@ -321,8 +321,8 @@ function getPositivesCount(arr) {
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
 function sortDigitNamesByNumericOrder(arr) {
-  let number=['zero','one','two', 'three','four','five','six','seven','eight','nine'];
-  return arr.sort((a,b)=>number.indexOf(a)-number.indexOf(b));
+  let number=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  return arr.sort((a, b)=>number.indexOf(a)-number.indexOf(b));
 }
 
 /**
@@ -338,7 +338,7 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-  return arr.reduce((x,y)=>{return x+y;},0);
+  return arr.reduce((x, y)=>{return x+y;}, 0);
 }
 
 /**
@@ -417,7 +417,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
-   return arr.sort((a,b)=>{if(a.country>b.country) return 1; else if(a.country==b.country){if(a.city>b.city) return 1; else return -1;} else return -1;});
+   return arr.sort((a, b)=>{if(a.country>b.country) return 1; else if(a.country==b.country){if(a.city>b.city) return 1; else return -1;} else return -1;});
 }
 
 /**
@@ -439,7 +439,7 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-  return new Array(n).fill([]).map((a, i)=>{ return new Array(n).fill(0).map((b,j)=>{return (i==j)?1:0;});});
+  return new Array(n).fill([]).map((a, i)=>{ return new Array(n).fill(0).map((b, j)=>{return (i==j)?1:0;});});
 }
 
 /**
@@ -456,7 +456,7 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  return Array(end-start+1).fill().map((value,index)=>start+index);
+  return Array(end-start+1).fill().map((value, index)=>start+index);
 }
 
 /**
@@ -471,7 +471,7 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-  return arr.filter((value,index)=>arr.indexOf(value)===index);
+  return arr.filter((value, index)=>arr.indexOf(value)===index);
 }
 
 /**
