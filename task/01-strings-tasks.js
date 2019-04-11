@@ -277,11 +277,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const s1='A♣,2♣,3♣,4♣,5♣,6♣,7♣,8♣,9♣,10♣,J♣,Q♣,K♣,A♦,2♦,3♦,4♦';
-  const s2='5♦,6♦,7♦,8♦,9♦,10♦,J♦,Q♦,K♦,A♥,2♥,3♥,4♥,5♥,6♥,7♥,8♥';
-  const s3='9♥,10♥,J♥,Q♥,K♥,A♠,2♠,3♠,4♠,5♠,6♠,7♠,8♠,9♠,10♠,J♠,Q♠,K♠';
-  const str=s1+s2+s3;
-  return str.split(',').indexOf(value);
+  const s1='A♣,2♣,3♣,4♣,5♣,6♣,7♣,8♣,9♣,10♣,J♣,Q♣,K♣,A♦,2♦,3♦,4♦,5♦,6♦,7♦,8♦,9♦,10♦,J♦,Q♦,K♦,';
+  const s2='A♥,2♥,3♥,4♥,5♥,6♥,7♥,8♥,9♥,10♥,J♥,Q♥,K♥,A♠,2♠,3♠,4♠,5♠,6♠,7♠,8♠,9♠,10♠,J♠,Q♠,K♠';
+  return (s1+s2).split(',').indexOf(value);
 }
 
 module.exports = {
