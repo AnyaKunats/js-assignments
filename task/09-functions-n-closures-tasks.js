@@ -25,7 +25,7 @@
  *
  */
 function getComposition(f, g) {
-  return x=>f(g(x))
+  return x=>f(g(x));
 }
 
 
@@ -64,14 +64,14 @@ function getPowerFunction(exponent) {
  *   getPolynom()      => null
  */
 function getPolynom() {
-  return (x)=>{
+  return x=>{
     var arg=arguments, result=0;
-      for(let i=0; i<arg.length; i++){
-        result+=arg[i]*Math.pow(x,arg.length-1-i);
-      }
-      return result;
+    for(let i=0; i<arg.length; i++){
+      result+=arg[i]*Math.pow(x, arg.length-1-i);
     }
+    return result;
   }
+}
 /**
  * Memoizes passed function and returns function
  * which invoked first time calls the passed function and then always returns cached result.
@@ -87,7 +87,7 @@ function getPolynom() {
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
 function memoize(func) {
-  let result=func();
+  const result=func();
   return ()=>(result);
 }
 
