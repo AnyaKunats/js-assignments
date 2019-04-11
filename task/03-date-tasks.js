@@ -78,7 +78,8 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
 function timeSpanToString(startDate, endDate) {
-  let hour = endDate.getHours() - startDate.getHours(),minute = endDate.getMinutes() - startDate.getMinutes(), second = endDate.getSeconds() - startDate.getSeconds(), millisecond = endDate.getMilliseconds() - startDate.getMilliseconds();
+  const hour = endDate.getHours() - startDate.getHours(),minute = endDate.getMinutes() - startDate.getMinutes();
+  const second = endDate.getSeconds() - startDate.getSeconds(), millisecond = endDate.getMilliseconds() - startDate.getMilliseconds();
   return (hour < 12 ? '0' + hour : hour) + ':' + (minute < 10 ? '0' + minute : minute) + ':' + (second < 10 ? '0' + second : second) + '.' + (millisecond < 100 ? '00' + millisecond : millisecond);
 }
 
@@ -98,9 +99,9 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-  let hour=date.getUTCHours()<12?date.getUTCHours():date.getUTCHours()-12;
-  let min=date.getUTCMinutes();
-  let grad=Math.abs(hour*30+min/2-min*6)*Math.PI/180;
+  const hour=date.getUTCHours()<12?date.getUTCHours():date.getUTCHours()-12;
+  const min=date.getUTCMinutes();
+  const grad=Math.abs(hour*30+min/2-min*6)*Math.PI/180;
   return Math.min(grad, 2*Math.PI - grad);
 }
 
