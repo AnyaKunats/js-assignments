@@ -103,7 +103,7 @@ function* depthTraversalTree(root) {
     const element = arr.pop();
     yield element;
     if(element.children){
-      arr = arr.concat(element.children.reverse())};
+      arr = arr.concat(element.children.reverse());}
   }
 }
 
@@ -132,10 +132,10 @@ function* depthTraversalTree(root) {
 function* breadthTraversalTree(root) {
   let arr = [root];
   while (arr.length) {
-    let element = arr.pop();
+    const element = arr.pop();
     yield element;
     if (element.children){
-      arr = element.children.reverse().concat(arr)};
+      arr = element.children.reverse().concat(arr);}
   }
 }
 
@@ -153,7 +153,7 @@ function* breadthTraversalTree(root) {
  *   [ 0 ], [ 2, 4, 6, ... ]  => [ 0, 2, 4, 6, ... ]
  *   [ 1, 3, 5, ... ], [ -1 ] => [ -1, 1, 3, 5, ...]
  */
-function* mergeSortedSequences(source1, source2) {
+function mergeSortedSequences(source1, source2) {
   throw new Error('Not implemented');
 }
 
