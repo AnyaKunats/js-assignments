@@ -67,11 +67,8 @@ function getPolynom() {
   return x=>{
     var arg=arguments, result=0;
     for(let i=0; i<arg.length; i++){
-      result+=arg[i]*Math.pow(x, arg.length-1-i);
-    }
-    return result;
-  }
-}
+      result+=arg[i]*Math.pow(x, arg.length-1-i);}
+    return result;}}
 /**
  * Memoizes passed function and returns function
  * which invoked first time calls the passed function and then always returns cached result.
