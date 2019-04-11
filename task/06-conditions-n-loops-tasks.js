@@ -170,7 +170,7 @@ function doRectanglesOverlap(rect1, rect2) {
  *
  */
 function isInsideCircle(circle, point) {
-  return Math.hypot(circle.center.x - point.x, circle.center.y - point.y) < circle.radius;
+  return Math.hypot(circle.center.x-point.x, circle.center.y-point.y) < circle.radius;
 }
 
 
@@ -220,7 +220,7 @@ function findFirstSingleChar(str) {
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
   var str = '';
   isStartIncluded === true ? str+='[' : str+='(';
-  str +=Math.min(a,b)+', '+Math.max(a,b);
+  str +=Math.min(a, b)+', '+Math.max(a, b);
   isEndIncluded === true ? str+=']' : str +=')';
   return str;
 }
@@ -364,8 +364,8 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
-  let time=(endDate-startDate);
-  let sec=1000, min=sec*60, hour=min*60, day=hour*24;
+  const time=(endDate-startDate);
+  const sec=1000, min=sec*60, hour=min*60, day=hour*24;
   if(time<=45*sec){
     return 'a few seconds ago';}
   if(time<=90*sec){
