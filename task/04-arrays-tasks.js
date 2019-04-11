@@ -233,7 +233,7 @@ function toArrayOfSquares(arr) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 function getMovingSum(arr) {
-  let sum=0
+  let sum=0;
   return arr.map(x => sum+=x);
 }
 
@@ -321,7 +321,7 @@ function getPositivesCount(arr) {
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
 function sortDigitNamesByNumericOrder(arr) {
-  let number=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  const number=['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
   return arr.sort((a, b)=>number.indexOf(a)-number.indexOf(b));
 }
 
@@ -417,7 +417,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
-   return arr.sort((a, b)=>{if(a.country>b.country) return 1; else if(a.country==b.country){if(a.city>b.city) return 1; else return -1;} else return -1;});
+  return arr.sort((a, b)=>{if(a.country>b.country) return 1; else if(a.country===b.country){if(a.city>b.city) return 1; else return -1;} else return -1;});
 }
 
 /**
@@ -439,7 +439,7 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-  return new Array(n).fill([]).map((a, i)=>{ return new Array(n).fill(0).map((b, j)=>{return (i==j)?1:0;});});
+  return new Array(n).fill([]).map((a, i)=>{ return new Array(n).fill(0).map((b, j)=>{return (i===j)?1:0;});});
 }
 
 /**
