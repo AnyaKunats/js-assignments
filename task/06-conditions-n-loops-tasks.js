@@ -29,14 +29,14 @@
  *
  */
 function getFizzBuzz(num) {
-  if(num%3===0 && num%5===0)
-    return 'FizzBuzz';
-  else if(num%3===0)
-    return 'Fizz';
-  else if(num%5===0)
-    return 'Buzz';
-  else
-    return num;
+  if(num%3===0 && num%5===0){
+    return 'FizzBuzz';}
+  else if(num%3===0){
+    return 'Fizz';}
+  else if(num%5===0){
+    return 'Buzz';}
+  else{
+    return num;}
 }
 
 
@@ -53,8 +53,8 @@ function getFizzBuzz(num) {
  */
 function getFactorial(n) {
   let factorial=1;
-  for(let i=1; i<=n; i++)
-    factorial*=i;
+  for(let i=1; i<=n; i++){
+    factorial*=i;}
   return factorial;
 
 }
@@ -136,10 +136,10 @@ function isTriangle(a, b, c) {
  *
  */
 function doRectanglesOverlap(rect1, rect2) {
-  if(rect1.height>=rect2.top && rect1.width>=rect2.left)
-    return true;
-  else
-    return false;
+  if(rect1.height>=rect2.top && rect1.width>=rect2.left){
+    return true;}
+  else{
+    return false;}
 }
 
 
@@ -188,8 +188,8 @@ function isInsideCircle(circle, point) {
 function findFirstSingleChar(str) {
   for(var i=0; i<str.length; i++)
   {
-    if(str.indexOf(str[i])===i && str.lastIndexOf(str[i])===i)
-      return str[i];
+    if(str.indexOf(str[i])===i && str.lastIndexOf(str[i])===i){
+      return str[i];}
   }
   return null;
 }
@@ -366,26 +366,26 @@ function isBracketsBalanced(str) {
 function timespanToHumanString(startDate, endDate) {
   let time=(endDate-startDate);
   let sec=1000, min=sec*60, hour=min*60, day=hour*24;
-  if(time<=45*sec)
-    return 'a few seconds ago';
-  if(time<=90*sec)
-    return 'a minute ago';
-  if(time<=45*min)
-    return Math.round(time/min-1/min)+' minutes ago';
-  if(time<=90*min)
-    return 'an hour ago';
-  if(time<=22*hour)
-    return Math.round(time/hour-1/hour)+' hours ago';
-  if(time<=36*hour)
-    return 'a day ago';
-  if(time<=25*day)
-    return Math.round(time/day-1/day)+' days ago';
-  if(time<=45*day)
-    return'a month ago';
-  if(time<=345*day)
-    return Math.round(time/day/30)+ ' months ago';
-  if(time<545*day)
-    return 'a year ago';
+  if(time<=45*sec){
+    return 'a few seconds ago';}
+  if(time<=90*sec){
+    return 'a minute ago';}
+  if(time<=45*min){
+    return Math.round(time/min-1/min)+' minutes ago';}
+  if(time<=90*min){
+    return 'an hour ago';}
+  if(time<=22*hour){
+    return Math.round(time/hour-1/hour)+' hours ago';}
+  if(time<=36*hour){
+    return 'a day ago';}
+  if(time<=25*day){
+    return Math.round(time/day-1/day)+' days ago';}
+  if(time<=45*day){
+    return'a month ago';}
+  if(time<=345*day){
+    return Math.round(time/day/30)+ ' months ago';}
+  if(time<545*day){
+    return 'a year ago';}
   return Math.round(time/day/365)+' years ago';
 }
 
